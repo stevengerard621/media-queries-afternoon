@@ -1,22 +1,179 @@
 .App {
-  text-align: center;
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#header {
+  height: 75px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  box-sizing: border-box;
+  padding: 0px 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+#nav {
+  width: 30vw;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 100px;
+}
+
+.boot {
+  font-family: 'Kaushan Script', cursive;
+  color: rgb(255,207,53);
+  font-size: 2em;
+  margin-left: 100px;
+}
+
+.nav-links {
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .85em;
+  background-color: transparent;
+  outline-color: rgb(171,133,0);
+}
+
+/* #side-menu {
+  display: none;
+} */
+
+#ham-button {
+  display: none;
+  height: 40px;
+  width: 90px;
+  background-color: rgb(171,133,0);
+  margin-right: 30px;
+  border: none;
+  border-radius: 4px;
+  outline-color: rgb(171,133,0);
+}
+
+#hamburger {
+  display: none;
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+#side-menu {
+  height: calc(20vh);
+  width: 100vw;
+  background-color: chartreuse;
+  position: fixed;
+  top: 60px;
+  right: 0px;
+  display: none;
+  flex-direction: column;
+  align-content: flex-start;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .85em;
+  animation-name: menu;
+  animation-duration: .2s;
+  animation-timing-function: linear;
+}
+
+.drop-link {
+  color: white;
+  padding: 5px;
+}
+
+#container-div {
+  height: 96vh;
+  background-image: url("https://blackrockdigital.github.io/startbootstrap-agency/img/header-bg.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+}
+
+#center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#welcome {
+  height: 100px;
+  font-size: 3rem;
+  font-style: italic;
+}
+
+#nice {
+  box-sizing: border-box;
+  /* height: 100px; */
+  /* border: 2px solid black; */
+  font-size: 3.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+}
+
+#button {
+  height: 70px;
+  width: 225px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(171,133,0);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+@keyframes menu {
+  from {
+    transform: scale(0, 1)
+  }
+  to {
+    transform: scale(1)
+  }
+}
+
+@media (max-width: 1000px) {
+
+  #side-menu {
+    background-color: rgb(34,37,39);
+    display: flex;
+  }
+
+  #header {
+    height: 60px;
+    background-color: rgb(34,37,39);
+  }
+
+  #ham-button {
+    display: initial;
+  }
+
+  #hamburger {
+    display: initial;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+
+
+}
+
+@media (max-width: 800px) {
+
+  .boot {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 680px) {
+
+  .boot {
+    font-size: 1em;
+  }
 }

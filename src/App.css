@@ -40,10 +40,6 @@
   outline-color: rgb(171,133,0);
 }
 
-/* #side-menu {
-  display: none;
-} */
-
 #ham-button {
   display: none;
   height: 40px;
@@ -63,23 +59,21 @@
 #side-menu {
   height: calc(20vh);
   width: 100vw;
-  background-color: chartreuse;
   position: fixed;
   top: 60px;
-  right: 0px;
   display: none;
   flex-direction: column;
   align-content: flex-start;
   font-family: 'Montserrat', sans-serif;
   font-size: .85em;
   animation-name: menu;
-  animation-duration: .2s;
-  animation-timing-function: linear;
+  animation-duration: .08s;
 }
 
 .drop-link {
   color: white;
   padding: 5px;
+  margin-left: 5px;
 }
 
 #container-div {
@@ -109,7 +103,6 @@
 
 #nice {
   box-sizing: border-box;
-  /* height: 100px; */
   /* border: 2px solid black; */
   font-size: 3.5rem;
   font-family: 'Montserrat', sans-serif;
@@ -123,16 +116,18 @@
   border: none;
   border-radius: 5px;
   background-color: rgb(171,133,0);
+  outline-color: rgb(171,133,0);
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 @keyframes menu {
-  from {
-    transform: scale(0, 1)
+
+  0% {
+    background: transparent;
   }
-  to {
-    transform: scale(1)
+  100% {
+    background: rgb(34,37,39);
   }
 }
 
@@ -141,6 +136,7 @@
   #side-menu {
     background-color: rgb(34,37,39);
     display: flex;
+    z-index: 2;
   }
 
   #header {
@@ -168,6 +164,7 @@
 
   .boot {
     font-size: 1.2em;
+    margin-left: 50px;
   }
 }
 
@@ -175,5 +172,23 @@
 
   .boot {
     font-size: 1em;
+  }
+}
+
+@media (max-width: 460px) {
+
+  #welcome {
+    font-size: 2rem;
+  }
+
+  #nice {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-height: 640px) {
+
+  #side-menu {
+    height: calc(23vh);
   }
 }
